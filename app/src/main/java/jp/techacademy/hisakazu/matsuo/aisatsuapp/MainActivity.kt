@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-//import android.widget.TextView
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
-//import java.time.LocalTime
+import java.time.LocalTime
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -35,23 +35,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
   //              Log.d("UI_PARTS", "$hour:$minute")
   //              textView.text="$hour"+"$minute"
 
-               var num = "$hour:$minute"
+               var num = hour
 
-                if ("02:00"<= num && num < "10:00"){
+                if (2<= num && num < 10){
                     Log.d("UI_PARTS", "おはよう")
                     textView.text="おはよう"
                 }
-                else if ("10:00"<= num && num < "18:00"){
+                else if (10<= num && num < 18){
                     Log.d("UI_PARTS", "こんにちは")
                     textView.text="こんにちは"
                 }
 
-                else if ("18:00"<= num && num < "24:00"){
+                else if (18<= num && num < 24){
                     Log.d("UI_PARTS", "こんばんは")
                     textView.text="こんばんは"
                 }
 
-                else if  ("00:00"<= num && num < "02:00"){
+                else if  (0<= num && num < 2){
                     Log.d("UI_PARTS", "こんばんは")
                     textView.text="こんばんは"
                 }

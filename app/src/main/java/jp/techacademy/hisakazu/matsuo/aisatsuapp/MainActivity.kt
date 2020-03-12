@@ -32,32 +32,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val timePickerDialog = TimePickerDialog(
             this,
             TimePickerDialog.OnTimeSetListener { view, hour, minute ->
-  //              Log.d("UI_PARTS", "$hour:$minute")
-  //              textView.text="$hour"+"$minute"
 
                var num = hour
 
                 if (2<= num && num < 10){
-                    Log.d("UI_PARTS", "おはよう")
                     textView.text="おはよう"
                 }
                 else if (10<= num && num < 18){
-                    Log.d("UI_PARTS", "こんにちは")
                     textView.text="こんにちは"
                 }
 
                 else if (18<= num && num < 24){
-                    Log.d("UI_PARTS", "こんばんは")
                     textView.text="こんばんは"
                 }
 
                 else if  (0<= num && num < 2){
-                    Log.d("UI_PARTS", "こんばんは")
                     textView.text="こんばんは"
                 }
 
                 else{
-                    Log.d("UI_PARTS", "Erro")
                     textView.text="入力ミスです、もう一度お願いします。"
                 }
 
